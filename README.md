@@ -37,3 +37,23 @@ ExpertTodoという名前を使用すると環境にHerokuを使う場合など�
 
 ## 環境構築方法
 こちらに環境構築方法を記載してください。
+### rails new するまでの個人的メモ
+- fork
+- git clone https://github.com/ippomihosanpo/expert-todo.git
+- bundle init
+- Gemfile編集
+```
+source 'https://rubygems.org'
+gem 'rails'
+```
+- bundle install --path vendor/bundle --jobs=4
+- bundle exec rails new -B -d postgresql .
+- Overwrite ~~/expert-todo/README.md? (enter "h" for help) [Ynaqdh] n
+- Overwrite ~~/expert-todo/Gemfile? (enter "h" for help) [Ynaqdh] Y
+- Gemfileごにょる(いらないもの、いるもの)
+- bundle install --path vendor/bundle --jobs=4
+### 環境構築方法
+- (brew install postgresql)
+- (rbenv install 2.4.1)
+- (rbenv local 2.4.1)
+- bin/setup
