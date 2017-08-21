@@ -52,8 +52,10 @@ gem 'rails'
 - Overwrite ~~/expert-todo/Gemfile? (enter "h" for help) [Ynaqdh] Y
 - Gemfileごにょる(いらないもの、いるもの)
 - bundle install --path vendor/bundle --jobs=4
+- (Herokuが吐くログレベルを下げる heroku config:add LOG_LEVEL=DEBUG)
+
 ### 環境構築方法
 - (brew install postgresql)
-- (rbenv install 2.4.1)
-- (rbenv local 2.4.1)
+- (rbenv install 2.3.4)
+- (rbenv local 2.3.4)
 - bin/setup
