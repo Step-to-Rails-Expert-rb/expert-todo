@@ -70,6 +70,7 @@ group :test do
   gem "rspec"
   gem "rspec-rails"
   gem "database_rewinder"
+  gem "faker"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
