@@ -1,0 +1,12 @@
+ul.menu {
+  height: 35px;
+  text-align: center;
+  li {
+    width: 30%;
+    display: inline-block;
+    border-left: solid 1px #000
+  }
+  li:last-child {
+    border-right: solid 1px #000
+  }
+}
