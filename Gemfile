@@ -53,6 +53,8 @@ group :development, :test do
   gem "pry-doc"
   gem "pry-rails"
   gem "pry-stack_explorer"
+  
+  gem "timecop"
 end
 
 group :development do
