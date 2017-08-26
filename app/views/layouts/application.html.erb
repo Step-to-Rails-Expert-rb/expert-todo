@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <div id="header">
+      ExpertTodo&nbsp;&nbsp;
+      <% if @current_user.present? %>
+        <%= @current_user.name %>&nbsp;&nbsp;
+        <%= link_to "ログアウト", login_index_path, method: :delete %>
+      <% end %>
+      <p id="notice"><%= notice %></p>
+    </div>
+    <div id="content">
     <%= yield %>
+    </div>
   </body>
 </html>
