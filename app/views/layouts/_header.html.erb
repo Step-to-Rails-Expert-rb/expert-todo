@@ -1,7 +1,7 @@
 <header id="expert-todo-header">
     <ul class="menu">
       <li><%= link_to "Top", root_path %></li>
-      <li><%= link_to "Login", new_user_session_path %></li>
+      <li><%= login_or_logout_link(current_user) %></li>
       <li><%= link_to "Some Feature", new_user_session_path %></li>
     </ul>
   </header>
