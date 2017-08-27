@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
   root "welcome#index"
+  devise_for :users, controllers: {
+      sessions: "users/sessions",
+  }
   
   resources :tasks, except: [:show]
 end
