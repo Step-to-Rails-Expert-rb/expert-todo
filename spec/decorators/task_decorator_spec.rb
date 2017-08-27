@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe '#due_date_without_time' do
+describe "#due_date_without_time" do
   context "due_date is nil" do
     it "returns nil" do
       task = build_stubbed(:task)
