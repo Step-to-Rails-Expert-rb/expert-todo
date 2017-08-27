@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Tasks", type: :request do
   
-  let(:task) {create(:task)}
+  let(:task) { create(:task) }
   
   
   describe "GET /tasks" do
