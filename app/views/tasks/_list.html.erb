@@ -1,0 +1,39 @@
+<br>
+<div class="row">
+<% tasks.each do |task| %>
+<%
+  case
+  when task.status == 2
+    panel = 'panel-default'
+  when task.priority == 1
+    panel = 'panel-danger'
+  when task.priority == 2
+    panel = 'panel-warning'
+  else
+    panel = 'panel-info'
+  end
+%>
+<div class="col-xs-4">
+  <div class="panel <%= panel %> task" data-task-id="<%= task.id %>">
+      <div class="panel-heading">
+          <%= task.scheduled_start_at.try(:strftime, '%Y/%m/%d %H:%M') %> 〜
+          <%= task.scheduled_end_at.try(:strftime, '%Y/%m/%d %H:%M') %>
+          <% unless task.status == 2 %>
+            <%= link_to "tasks/#{task.id}/finish", method: :patch, remote: true do %>
+              <%= fa_icon 'check-circle-o' %>
+            <% end %>
+          <% else %>
+            <%= fa_icon 'check-circle' %>
+          <% end %>
+      <br>
+      <strong><%= task.title %></strong>
+      [<%= label_priority(task.priority) %>]
+      [<%= label_status(task.status) %>]
+    </div>
+    <div class="panel-body">
+      <%= task.detail.truncate(100, omission: '…') %>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>

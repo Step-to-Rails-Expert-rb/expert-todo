@@ -6,8 +6,8 @@ class LoginController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: user_params[:email])
-    if @user.present? && @user.authenticate(user_params[:password])
+    @user = User.find_by(email: login_params[:email])
+    if @user.present? && @user.authenticate(login_params[:password])
       # ログインOK
       reset_session
       session[:user] = @user.id
@@ -27,7 +27,7 @@ class LoginController < ApplicationController
   end
 
   private
-    def user_params
+    def login_params
       params.require(:user).permit(:email, :password)
     end
 end

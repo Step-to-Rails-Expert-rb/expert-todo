@@ -8,6 +8,24 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード(確認)"
+      task:
+        title: "タイトル"
+        detail: "詳細"
+        priority: "優先度"
+        priority_enum:
+          1: "緊急"
+          2: "高"
+          3: "中"
+          4: "低"
+        status: "ステータス"
+        status_enum:
+          0: "未"
+          1: "進行中"
+          2: "完了"
+          3: "保留"
+        scheduled_start_at: "予定開始日時"
+        scheduled_end_at: "予定終了日時"
+        finished_at: "完了日時"
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

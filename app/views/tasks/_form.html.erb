@@ -1,0 +1,92 @@
+<% if task.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+    <% task.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form.hidden_field :user_id, value: @current_user.id %>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :title %>
+    </div>
+    <div class="col-xs-8">
+    <%= form.text_field :title, id: :task_title, class: "form-control" %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :detail %>
+    </div>
+    <div class="col-xs-8">
+    <%= form.text_area :detail, id: :task_detail, class: "form-control", style: "height:150px" %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :priority %>
+    </div>
+    <div class="col-xs-3">
+    <%= form.select :priority, options_for_priority, {}, class: 'form-control' %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :status %>
+    </div>
+    <div class="col-xs-3">
+    <%= form.select :status, options_for_status, {}, class: 'form-control' %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :scheduled_start_at %>
+    </div>
+    <div class="col-xs-8">
+    <%= raw sprintf(
+    form.datetime_select(
+      :scheduled_start_at,
+      {use_month_numbers: true,
+      start_year:        Time.now.year,
+      end_year:          (Time.now.year - 5),
+      default:           Time.zone.today,
+      date_separator:    '%s',
+      datetime_separator: '%s'},
+      {class: 'form-control datetime-column'}
+    ), '年 ', '月 ', '日 - ')
+    %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+    <%= form.label :scheduled_end_at %>
+    </div>
+    <div class="col-xs-8">
+    <%= raw sprintf(
+    form.datetime_select(
+      :scheduled_end_at,
+      {use_month_numbers: true,
+      start_year:        Time.now.year,
+      end_year:          (Time.now.year - 5),
+      default:           Time.zone.today,
+      date_separator:    '%s',
+      datetime_separator: '%s'},
+      {class: 'form-control datetime-column'}
+    ), '年 ', '月 ', '日 - ')
+    %>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # TODO機能作成してないのでとりあえずユーザーリストに
-  root 'users#index'
+  root 'tasks#index'
+  resources :tasks do
+    collection do
+      patch ':id/finish', to: "tasks#finish"
+    end
+  end
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy ]
   resources :login, only: [:index, :create] do
     collection do
