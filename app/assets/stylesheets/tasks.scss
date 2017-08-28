@@ -1,0 +1,17 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+div#todo-list div.task {
+  height: 200px;
+  div.panel-body {
+    height: 100%;
+  }
+  i {
+    font-size: 150%;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #ccc;
+  }
+}

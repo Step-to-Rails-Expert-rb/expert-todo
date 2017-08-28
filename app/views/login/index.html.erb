@@ -1,0 +1,41 @@
+<%= form_for(User.new, url: login_index_path, method: :post) do |f| %>
+  <% if flash[:error_message].present? %>
+    <div class="alert alert-danger">
+      <ul><li><%= flash[:error_message] %></li></ul>
+    </div>
+  <% end %>
+  <%= hidden_field_tag :referer, flash[:referer] %>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-2">
+        <%= f.label :email %>
+      </div>
+      <div class="col-xs-3">
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-2">
+        <%= f.label :password %>
+      </div>
+      <div class="col-xs-3">
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-3">
+        <%= f.submit 'ログイン', class: "btn btn-primary" %>
+        &nbsp;&nbsp;
+        <%= link_to "新規登録", new_user_path %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

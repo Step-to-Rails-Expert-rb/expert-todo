@@ -1,0 +1,2 @@
+$("#todo-list").html("<%= escape_javascript(render 'list', tasks: @tasks) %>")
+$("#todo-modal").modal("hide")

@@ -1,0 +1,2 @@
+$("#todo-modal").html("<%= escape_javascript(render 'modal_form', task: @task, method: :put) %>")
+$("#todo-modal").modal("show")

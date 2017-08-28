@@ -1,0 +1,8 @@
+{
+  "name": "expert-todo",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
