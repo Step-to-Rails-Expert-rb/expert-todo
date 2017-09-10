@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  config.action_mailer.default_url_options = { host: 'two-sann-expert-todo.herokuapp.com', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'two-sann-expert-todo.herokuapp.com' }
 
   # Setup the mailer config
   config.action_mailer.delivery_method = :smtp
