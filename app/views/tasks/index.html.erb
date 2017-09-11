@@ -9,6 +9,7 @@
     <th>期限日</th>
     <th>作成日時</th>
     <th>更新日時</th>
+    <th>削除</th>
   </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
         <td><%= task.due_date_without_time %></td>
         <td><%= task.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
         <td><%= task.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
+        <td><%= link_to "削除", task_path(task.id), method: "DELETE" %></td>
       </tr>
   <% end %>
   </tbody>
