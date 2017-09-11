@@ -1,0 +1,5 @@
+<h1>新規作成</h1>
+<%= form_for @task, url: tasks_path, html: {method: "post"} do |f| %>
+    <%= render partial: 'form', locals: {f: f} %>
+<% end %>
+
