@@ -52,5 +52,4 @@ RSpec.describe "Tasks", type: :request do
       end.to change(Task, :count).by(-1)
     end
   end
-
 end
