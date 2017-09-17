@@ -17,7 +17,7 @@ describe "#due_date_without_time" do
 
     it "returns due_date without time and timezone" do
       pending "This example fails around 01:00 am because of timezone difference"
-      fail
+      raise
       # DateTime.now
       #=> Tue, 12 Sep 2017 01:13:28 +0900
       # task
