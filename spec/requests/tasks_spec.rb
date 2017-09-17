@@ -23,7 +23,7 @@ RSpec.describe "Tasks", type: :request do
   describe "POST /tasks" do
     it "creates a task" do
       expect do
-        post "/tasks", params: {task: attributes_for(:task)}
+        post "/tasks", params: { task: attributes_for(:task) }
       end.to change(Task, :count).by(1)
       expect(response).to redirect_to tasks_path
     end
@@ -39,7 +39,7 @@ RSpec.describe "Tasks", type: :request do
   describe "PATCH /tasks/:id" do
     it "changes a task" do
       patch "/tasks/#{@task.id}",
-            params: {task: attributes_for(:task, task_name: "変更されたタスク名")}
+            params: { task: attributes_for(:task, task_name: "変更されたタスク名") }
       @task.reload
       expect(@task.task_name).to eq "変更されたタスク名"
     end
