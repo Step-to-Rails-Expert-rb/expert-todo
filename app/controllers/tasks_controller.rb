@@ -33,7 +33,7 @@ class TasksController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @task = current_user.tasks.find_by(id: params[:id])
     @task.destroy!
@@ -49,7 +49,7 @@ class TasksController < ApplicationController
         :due_date,
       )
     end
-  
+
     def load_task
       @task = current_user.tasks.find_by(id: params[:id])
     end
