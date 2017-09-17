@@ -1,0 +1,13 @@
+inherit_gem:
+  onkcop:
+    - "config/rubocop.yml"
+    - "config/rails.yml"
+    - "config/rspec.yml"
+
+AllCops:
+  TargetRubyVersion: 2.4
+  TargetRailsVersion: 5.1
+
+# Rspecで使用するため
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
