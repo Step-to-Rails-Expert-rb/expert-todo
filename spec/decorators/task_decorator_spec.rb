@@ -25,7 +25,6 @@ describe "#due_date_without_time" do
       task = build_stubbed(:task, :due_date)
       decorated_task = ActiveDecorator::Decorator.instance.decorate(task)
       expect(decorated_task.due_date_without_time).to eq(DateTime.now.strftime("%Y-%m-%d"))
-
     end
 
     after do
