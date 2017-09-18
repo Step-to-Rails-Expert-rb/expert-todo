@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem 'haml'
+gem "haml-rails", "~> 1.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
