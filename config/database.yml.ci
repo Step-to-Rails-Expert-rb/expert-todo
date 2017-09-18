@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  username: ubuntu
+  host: localhost
+  encoding: utf8
+  database: test_restaurant_reputation_research
+  pool: 5
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
