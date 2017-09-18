@@ -1,4 +1,4 @@
-<h1>編集</h1>
+<h1><%= t("common.edit") %></h1>
 <%= form_for @task, url: task_path, html: {method: "patch"} do |f| %>
     <%= render partial: 'form', locals: {f: f} %>
 <% end %>
