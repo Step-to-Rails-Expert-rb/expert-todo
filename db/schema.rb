@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 20170903095839) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "assigns", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "task_id", null: false
-  end
-
   create_table "project_members", force: :cascade do |t|
     t.bigint "project_id"
     t.bigint "user_id"
@@ -34,12 +29,14 @@ ActiveRecord::Schema.define(version: 20170903095839) do
 
   create_table "tasks", force: :cascade do |t|
     t.bigint "project_id"
+    t.bigint "user_id"
     t.string "title", limit: 240, null: false
     t.string "description", limit: 500
     t.datetime "start_on", null: false
     t.datetime "end_on", null: false
     t.integer "state", limit: 2, null: false
     t.index ["project_id"], name: "index_tasks_on_project_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
