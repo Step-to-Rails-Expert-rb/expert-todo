@@ -13,13 +13,13 @@ describe TaskDecorator do
     
     context "due_date is NOT nil" do
       before do
-        Timecop.freeze(DateTime.now)
+        Timecop.freeze(DateTime.current)
       end
       
       it "returns due_date without time and timezone" do
         task = build_stubbed(:task, :due_date)
         decorated_task = ActiveDecorator::Decorator.instance.decorate(task)
-        expect(decorated_task.due_date_without_time).to eq(DateTime.now.strftime("%Y-%m-%d"))
+        expect(decorated_task.due_date_without_time).to eq(DateTime.current.strftime("%Y-%m-%d"))
       end
       
       after do

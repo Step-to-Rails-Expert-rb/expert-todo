@@ -8,7 +8,7 @@ FactoryGirl.define do
     end
 
     trait :due_date do
-      due_date { DateTime.now }
+      due_date { DateTime.current }
     end
   end
 end
