@@ -37,11 +37,10 @@ class ProjectsController < ApplicationController
   end
 
   private
+
   def project_create_params
     params.require(:project).permit(:name)
   end
+  alias_method :project_update_params, :project_create_params
 
-  def project_update_params
-    params.require(:project).permit(:name)
-  end
 end
