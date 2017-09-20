@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
     end
 
     create_table :tasks do |t|
-      t.references :project
+      t.references :projects
       t.references :user
       t.string :title,              null: false, limit: 240
       t.string :description,        limit: 500
@@ -16,7 +16,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
     end
 
     create_table :project_members do |pm|
-      pm.references :project
+      pm.references :projects
       pm.references :user
       pm.integer :role,               null: false, limit: 1
     end
@@ -27,6 +27,5 @@ class CreateTasks < ActiveRecord::Migration[5.1]
     drop_table :project_members
     drop_table :tasks
     drop_table :projects
-
   end
 end
