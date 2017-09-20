@@ -1,0 +1,9 @@
+%h1 Detail project & tasks.
+
+%h2 Detail project
+= 'Name:' +  @project.name
+%br
+= link_to 'edit', edit_project_path(@project)
+
+%h2 Tasks
+= link_to 'Add task.', new_project_task_path(@project)

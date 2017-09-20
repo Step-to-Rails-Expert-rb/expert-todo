@@ -1,0 +1,8 @@
+%h1 Make project.
+
+= form_with model: Project.new,local: true do |form|
+  = form.label :name
+  = form.text_field :name
+  %br
+  %br
+  = form.submit "Submit"
