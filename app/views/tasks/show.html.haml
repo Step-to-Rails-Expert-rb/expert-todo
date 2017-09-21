@@ -1,0 +1,13 @@
+%h1 Detail task.
+
+= t('labels.tasks.title') + ':' +  @task.title
+%br
+= t('labels.tasks.description') + ':' +  @task.description
+%br
+= t('labels.tasks.start_on') + ':' +  @task.start_on
+%br
+= t('labels.tasks.end_on') + ':' +  @task.end_on
+%br
+= t('labels.tasks.state') + ':' +  @task.state_name
+%br
+= link_to 'edit task', edit_project_task_path(@task.project, @task)
