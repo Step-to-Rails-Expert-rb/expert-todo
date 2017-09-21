@@ -20,12 +20,14 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = current_user.projects.select{|r|r.id == params[:id].to_i}.first
+    raise ActiveRecord::RecordNotFound unless @project
     @tasks = current_user.tasks
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = current_user.projects.select{|r|r.id == params[:id].to_i}.first
+    raise ActiveRecord::RecordNotFound unless @project
   end
 
   def update
