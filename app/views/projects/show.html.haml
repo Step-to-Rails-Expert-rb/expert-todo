@@ -22,7 +22,7 @@
   %tbody
     -@tasks.each do |t|
       %tr
-        %td= link_to t.title, project_task_path(t)
+        %td= link_to t.title, project_task_path(@project, t)
         %td= t.description
         %td= t.start_on.to_date
         %td= t.end_on.to_date
