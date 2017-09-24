@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Tasks", type: :request do
   let(:task) { create(:task) }
-  
+
   before do
     sign_in task.user
   end
