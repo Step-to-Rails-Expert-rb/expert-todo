@@ -25,15 +25,13 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "login/logout" do
-    before do
-      @login_user = create(:user)
-    end
+    let(:user) { create(:user) }
 
     describe "POST /users/sign_in" do
       it "signs in and out" do
-        post "/users/sign_in", params: { user: attributes_for(:user), email: @login_user.email }
+        post "/users/sign_in", params: { user: attributes_for(:user), email: user.email }
         expect(response).to redirect_to tasks_path
-        expect(controller.current_user).to eq(@login_user)
+        expect(controller.current_user).to eq(user)
         delete "/users/sign_out"
         expect(controller.current_user).to eq nil
       end
