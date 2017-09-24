@@ -1,0 +1,14 @@
+%h1 My projects
+
+%table
+  %thead
+    %tr= t('labels.projects.name')
+
+  %tbody
+    -@projects.each do |prj|
+      %tr
+        %td= link_to prj.name, project_path(prj)
+
+
+%br
+= link_to 'Create my project', new_project_path

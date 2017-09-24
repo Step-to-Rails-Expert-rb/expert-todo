@@ -1,0 +1,29 @@
+%h1 Detail project & tasks.
+
+%h2 Detail project
+= 'Name:' +  @project.name
+%br
+= link_to 'edit', edit_project_path(@project)
+
+%hr
+
+%h2 Tasks
+= link_to 'Add task.', new_project_task_path(@project)
+
+%br
+
+%table
+  %thead
+    %tr= t('labels.tasks.title')
+    %tr= t('labels.tasks.descritpion')
+    %tr= t('labels.tasks.start_on')
+    %tr= t('labels.tasks.end_on')
+    %tr= t('labels.tasks.state')
+  %tbody
+    -@tasks.each do |t|
+      %tr
+        %td= link_to t.title, project_task_path(@project, t)
+        %td= t.description
+        %td= t.start_on.to_date
+        %td= t.end_on.to_date
+        %td= t.state_name
