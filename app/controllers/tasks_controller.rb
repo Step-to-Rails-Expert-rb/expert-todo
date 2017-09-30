@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_task, only: [:edit, :update]
+  before_action :load_task, only: [:edit, :update, :destroy]
 
   def index
     @tasks = current_user.tasks
@@ -35,7 +35,6 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = current_user.tasks.find_by(id: params[:id])
     @task.destroy!
     redirect_to tasks_path, notice: "タスクを削除しました"
   end
