@@ -41,19 +41,19 @@ gem "active_decorator"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-
+  
   # Detect N+1 problem.
   gem "bullet"
-
+  
   # To manage environment variables
   gem "dotenv-rails"
-
+  
   # Debugger
   gem "pry-byebug"
   gem "pry-doc"
   gem "pry-rails"
   gem "pry-stack_explorer"
-
+  
   gem "timecop"
 end
 
@@ -65,7 +65,7 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen", "~> 2.0.0"
-
+  
   gem "onkcop", require: false
 end
 
@@ -73,8 +73,10 @@ group :test do
   gem "database_rewinder"
   gem "factory_girl_rails"
   gem "faker"
-  gem "rspec"
-  gem "rspec-rails"
+  %w[rails core expectations mocks support].each do |name|
+    gem "rspec-#{name}", github: "rspec/rspec-#{name}"
+  end
+  gem "capybara"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
