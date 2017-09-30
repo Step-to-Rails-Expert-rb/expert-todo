@@ -13,3 +13,13 @@ AllCops:
 # Rspecで使用するため
 Style/MethodCalledOnDoEndBlock:
   Enabled: false
+
+Layout/EmptyLineAfterMagicComment:
+  Exclude:
+    - "bin/webpack"
+    - "bin/webpack-dev-server"
+
+Layout/AlignParameters:
+  Exclude:
+    - "bin/webpack"
+    - "bin/webpack-dev-server"
