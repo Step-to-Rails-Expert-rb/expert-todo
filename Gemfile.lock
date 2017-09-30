@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/rails/webpacker.git
+  revision: 815458ccbd22537c60d0f779b53ff174a12b784b
+  specs:
+    webpacker (3.0.1)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
+
+GIT
   remote: https://github.com/rspec/rspec-core.git
   revision: b81b8b3e3449bc1b95c5dab499592eba174c0e3f
   specs:
@@ -183,6 +192,8 @@ GEM
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
+    rack-proxy (0.6.2)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.3)
@@ -318,6 +329,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webpacker!
 
 RUBY VERSION
    ruby 2.4.1p111
