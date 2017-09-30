@@ -1,0 +1,6 @@
+ja:
+  helpers:
+    placeholder:
+      task:
+        task_name: "資料の作成"
+        description: "expert-todo（株）向けの営業資料の作成"

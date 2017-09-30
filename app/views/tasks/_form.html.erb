@@ -1,0 +1,26 @@
+<ul>
+  <li>
+    <%= f.label :task_name %>
+    <div>
+      <%= f.text_field :task_name, placeholder: true, required: true %>
+    </div>
+  </li>
+
+  <li>
+    <%= f.label :description %>
+    <div>
+      <%= f.text_field :description, placeholder: true %>
+    </div>
+  </li>
+
+  <li>
+    <%= f.label :due_date %>
+    <div>
+      <%= f.date_field :due_date %>
+    </div>
+  </li>
+
+  <li>
+    <%= f.submit t("common.submit") %>
+  </li>
+</ul>

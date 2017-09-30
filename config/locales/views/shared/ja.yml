@@ -1,0 +1,11 @@
+ja:
+  header:
+    top: Top
+    login: "ログイン"
+    logout: "ログアウト"
+    task: "タスク一覧"
+  common:
+    new: "新規作成"
+    edit: "編集"
+    destroy: "削除"
+    submit: "登録"
