@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+こういう TODO アプリを作ろうと思うんだ。
 
-Things you may want to cover:
+![](https://user-images.githubusercontent.com/1458041/32168442-0294e284-bdb0-11e7-856f-4ed52f4fae0e.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
