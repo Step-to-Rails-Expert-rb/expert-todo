@@ -1,10 +1,144 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Maya</title>
+    <link rel="stylesheet" href="stylesheets/application.css">
+  </head>
 
-<% if user_signed_in? %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to 'Sign in', new_user_session_path %>
-<%= link_to 'Sign up', new_user_registration_path %>
-<% end %>
+  <body>
 
+    <div class="body-inner">
+      <div class="account-switcher">
+        <ul class="accounts">
+          <li class="accounts-item accounts-item-selected">
+            <img class="accounts-item-avatar" src="https://pbs.twimg.com/profile_images/473357197762523136/yeXFfx70_bigger.jpeg" />
+            <div class="accounts-item-key">
+              &#x2318;1
+            </div>
+          </li>
+
+          <li class="accounts-item">
+            <img class="accounts-item-avatar" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_2_400x400.png" />
+            <div class="accounts-item-key">
+              &#x2318;2
+            </div>
+          </li>
+          <li class="accounts-item">
+            <img class="accounts-item-avatar" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_4_400x400.png" />
+            <div class="accounts-item-key">
+              &#x2318;3
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="context-switcher">
+        <div class="account-screen-name">
+          @284km
+        </div>
+        <div class="account-lists">
+          <h3 class="account-lists-heading">
+            Todos
+          </h3>
+          <ul>
+            <li class="account-list account-list-selected">
+              # game
+            </li>
+            <li class="account-list">
+              # anime
+            </li>
+          </ul>
+        </div>
+      </div>
+      <main class="main">
+        <div class="editor">
+          <div>
+            <textarea name="name" rows="3" cols="40" class="editor-textarea" placeholder="What will you do?" ></textarea>
+          </div>
+          <div>
+            <button class="editor-submit-button" type="button">
+              <i class="fa fa-bullhorn"></i>
+              Someday!
+            </button>
+            <div class="editor-counter">
+              140
+            </div>
+          </div>
+        </div>
+        <ul class="tweets">
+          <li class="tweets-item">
+            <div class="tweets-item-sub">
+              <img class="tweets-item-avatar" src="https://pbs.twimg.com/profile_images/473357197762523136/yeXFfx70_bigger.jpeg" height="48" width="48" />
+            </div>
+            <div class="tweets-item-main">
+              <div class="tweets-item-header">
+                <div class="tweets-item-names">
+                  <div class="tweets-item-display-name">
+                    秒速284km
+                  </div>
+                  <div class="tweets-item-screen-name">
+                    @284km
+                  </div>
+                </div>
+                <div class="tweets-item-datetime">
+                  2017-10-30 20:13
+                </div>
+              </div>
+              <div class="tweets-item-body">
+                 いい感じの UI を用意する💡
+              </div>
+            </div>
+          </li>
+          <li class="tweets-item">
+            <div class="tweets-item-sub">
+              <img class="tweets-item-avatar" src="https://pbs.twimg.com/profile_images/473357197762523136/yeXFfx70_bigger.jpeg" height="48" width="48" />
+            </div>
+            <div class="tweets-item-main">
+              <div class="tweets-item-header">
+                <div class="tweets-item-names">
+                  <div class="tweets-item-display-name">
+                    秒速284km
+                  </div>
+                  <div class="tweets-item-screen-name">
+                    @284km
+                  </div>
+                </div>
+                <div class="tweets-item-datetime">
+                  2017-10-30 20:15
+                </div>
+              </div>
+              <div class="tweets-item-body">
+                裏側の処理を書くよ🍣
+              </div>
+            </div>
+          </li>
+          <li class="tweets-item">
+            <div class="tweets-item-sub">
+              <img class="tweets-item-avatar" src="https://pbs.twimg.com/profile_images/473357197762523136/yeXFfx70_bigger.jpeg" height="48" width="48" />
+            </div>
+            <div class="tweets-item-main">
+              <div class="tweets-item-header">
+                <div class="tweets-item-names">
+                  <div class="tweets-item-display-name">
+                    秒速284km
+                  </div>
+                  <div class="tweets-item-screen-name">
+                    @284km
+                  </div>
+                </div>
+                <div class="tweets-item-datetime">
+                  2017-10-30 20:18
+                </div>
+              </div>
+              <div class="tweets-item-body">
+                いったいこれどういう TODO 管理方法になるんだ ❓❓❓
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
