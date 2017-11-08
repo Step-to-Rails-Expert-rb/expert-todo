@@ -2,6 +2,8 @@
 [Rails中級者向け勉強会Step-to-Rails-Expert.rb](https://step-to-rails-expert-rb.connpass.com/)のtodoアプリを作成しレビューしあう企画の元リポジトリです。
 企画についての詳しい説明は、[説明ページ](http://biibiebisuke.hatenablog.com/entry/2017/08/08/173906)をご覧ください。
 
+Here is [README.md](https://github.com/Step-to-Rails-Expert-rb/expert-todo/blob/master/docs/README.en.md) in English 
+
 ## アプリ名について
 ExpertTodoという名前を使用すると環境にHerokuを使う場合など、アプリ名をurlに使う場合重複してしまい使用できない可能性があるので、任意のアプリ名を考えるか、`${account_name}-expert-todo`のアプリ名としてください。
 
