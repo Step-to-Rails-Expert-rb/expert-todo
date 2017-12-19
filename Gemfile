@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # ユーザー認証
 gem 'devise'
+# bootstrap
+gem 'bootstrap-sass', '3.3.6'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
