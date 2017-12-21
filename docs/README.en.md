@@ -55,3 +55,9 @@ For example, satisfy the use case: the task, to finish cleaning by tomorrow, is 
 - Level 1: send a signup email
 - Level 2: a task has attached files
 - Level 3: Update the status of multiple tasks (task1 and task 2 into done, for example)
+
+### Third additional specifications
+#### Optional
+- Level 1: dupulicate a task  
+- Level 2: a task has priority
+- Level 3: sync to the Google calender
