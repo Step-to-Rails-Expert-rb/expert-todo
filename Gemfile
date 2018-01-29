@@ -26,6 +26,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "annotate"
   gem "web-console", ">= 3.3.0"
 end
 
