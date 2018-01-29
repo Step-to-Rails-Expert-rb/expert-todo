@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+  <p>User: <%= current_user.id %></p>
+  <%= link_to 'Sign out', destroy_user_session_path %>
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %>
+  <%= link_to 'Sign up', new_user_registration_path %>
+<% end %>
 
 <h1>Todos</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Done</th>
       <th>Title</th>
       <th>Content</th>
       <th>Deadlien</th>
-      <th>Done</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +22,10 @@
   <tbody>
     <% @todos.each do |todo| %>
       <tr>
+        <td><%= check_box_tag "done[#{todo.id}]", todo.done, todo.done %></td>
         <td><%= todo.title %></td>
         <td><%= todo.content %></td>
         <td><%= todo.deadlien %></td>
-        <td><%= todo.done %></td>
         <td><%= link_to 'Show', todo %></td>
         <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
         <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
