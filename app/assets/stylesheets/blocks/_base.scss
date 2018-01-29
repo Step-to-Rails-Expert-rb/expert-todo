@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* color: #333; */
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-family: "Helvetica Neue", Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
