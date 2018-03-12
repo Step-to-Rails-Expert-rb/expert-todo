@@ -1,0 +1,33 @@
+.new_body {
+}
+
+.form_title {
+  font-size: 20px;
+}
+
+.form {
+  width: 1400px;
+  margin: 12px 12px;
+  font-size: 16px;
+  &__task {
+    &__field {
+      height: 20px;
+      width: 400px;
+    }
+  }
+  &__detail {
+    &__field {
+      height: 100px;
+      width: 400px;
+    }
+  }
+  &__deadline {
+      height: 30px;
+  }
+  &__priority {
+      height: 30px;
+  }
+  &__status {
+      height: 30px;
+  }
+}

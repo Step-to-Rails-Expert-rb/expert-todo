@@ -1,0 +1,16 @@
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.button {
+  height: 60px;
+  width: 120px;
+  float: right;
+}
+
+.collection_select {
+  height: 100px;
+  width: 300px;
+}

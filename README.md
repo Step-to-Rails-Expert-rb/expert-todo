@@ -1,24 +1,37 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
-Things you may want to cover:
+### Association
+- has_many :tasks
+- has_many :tasks, through: :members
 
-* Ruby version
+## todos
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false, add_index|
+|detail|text|null: false, add_index|
+|user_id|integer|null: false, foreign_key: true|
+|deadline|datetime|null: false|
+|priority|integer|null: false, enum|
+|status|integer|null_false, enum|
 
-* System dependencies
+###Association
+- belongs_to :user
+- has_many :users, throgh: :members
 
-* Configuration
 
-* Database creation
+## members
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|task_id|integer|null: false, foreign_key: true|
+|each_status|integer||
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Association
+- belongs_to :user
+- belongs_to :task

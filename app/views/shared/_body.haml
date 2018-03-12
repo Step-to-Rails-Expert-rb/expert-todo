@@ -1,0 +1,13 @@
+.body
+  .body__wrapper
+    .each_task
+      %li.each_task__priority
+        PRIORITY
+      %li.each_task__deadline
+        DEADLINE
+      %li.each_task__task
+        TITLE
+      %li.each_task__status 
+        STATUS
+    = render "shared/tasks"
+    //= render partial: "shared/tasks", colelction: @todos

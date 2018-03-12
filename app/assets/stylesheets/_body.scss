@@ -1,0 +1,36 @@
+.body {
+  &__wrapper {
+
+  }
+}
+
+.each_task {
+  height: 30px;
+  width: 1400px;
+  margin: 12px 12px;
+  font-size: 16px;
+  border: 0.5px solid gray;
+  list-style: none;
+  &__priority {
+    width: 100px;
+    text-align: center;
+    float: left;
+  }
+  &__deadline {
+    width: 150px;
+    float: left;
+    text-align: center;
+  }
+  &__task {
+    float: left;
+  }
+  // &__detail {
+  //   width: 850px;
+  //   float: left;
+  // }
+  &__status {
+    width: 200px;
+    text-align: center;
+    float: right;
+  }
+}
