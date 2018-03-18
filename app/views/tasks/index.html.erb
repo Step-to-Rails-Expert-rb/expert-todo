@@ -1,0 +1,23 @@
+<h1>Tasks - Index</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tasks.each do |task| %>
+      <tr>
+        <td><%= link_to task.id, task %></td>
+        <td><%= task.title %></td>
+        <td><%= link_to "edit", edit_task_path(task) %></td>
+        <td><%= link_to "delete", task, method: :delete, data: { confirm: "You sure?" } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'add Task', new_task_path %>
