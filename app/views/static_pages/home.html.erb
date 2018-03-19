@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="col-md-12">
+      <section>
+        <h3><%= link_to "Add New Task", new_task_path %></h3>
+      </section>
+      <section>
+        <h3>Task List</h3>
+        <% if @task_items.any? %>
+          <ol class="tasks">
+            <%= render @task_items %>
+          </ol>
+        <% end %>
+      </section>
+    </div>
+    
+  </div>
+<% else %>
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
+  
+  <h2>
+    This is the home page for the
+    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+  
+  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+</div>
+<% end %>

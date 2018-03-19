@@ -1,0 +1,46 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/******************
+Setting
+*******************/
+/* col-lg- 1200px以上はそのまま */
+ 
+/* col-md- 1199px以下 */
+@mixin media_query_md {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }    
+}
+ 
+/* col-sm- 991px 以下 */
+@mixin media_query_sm {
+  @media screen and (max-width: 991px) {
+    @content;
+  }    
+}
+ 
+/* col-xs- 767px 以下 */
+@mixin media_query_xs {
+  @media screen and (max-width: 767px) {
+    @content;
+  }    
+}
+
+/******************
+共通
+*******************/
+body {
+  padding-top: 60px;
+}
+
+/******************
+Home
+*******************/
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+<li id="task-<%= task.id %>">
+  <%= link_to edit_task_path task do %>
+    <span class="content">
+      <%= task.content %>
+    </span>
+  <% end %>
+  <% if task.description.present? %>
+    <br>∟<%= task.description %>
+  <% end %>
+  
+  <% if task.deadline.present? %>
+    <%= task.deadline %>
+  <% end %>
+  <%= link_to "delete", task, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+  
+</li>
