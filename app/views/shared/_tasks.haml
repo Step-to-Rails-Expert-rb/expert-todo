@@ -3,7 +3,7 @@
   = link_to todo_path(todo.id) do
     .each_task
       %li.each_task__priority
-        S
+        = todo.priority.name
       %li.each_task__deadline
         3月12日
       %li.each_task__task
@@ -11,4 +11,4 @@
       / %li.each_task__detail
       /   = todo.detail
       %li.each_task__status 
-        未着手
+        = todo.status.name
