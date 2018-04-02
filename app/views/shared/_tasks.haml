@@ -1,0 +1,14 @@
+//= link_to todo_path(todo.id), class: "each_task" do
+- @todos.each do |todo|
+  = link_to todo_path(todo.id) do
+    .each_task
+      %li.each_task__priority
+        = todo.priority.name
+      %li.each_task__deadline
+        3月12日
+      %li.each_task__task
+        = todo.task
+      / %li.each_task__detail
+      /   = todo.detail
+      %li.each_task__status 
+        = todo.status.name

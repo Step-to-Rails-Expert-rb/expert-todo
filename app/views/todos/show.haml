@@ -1,0 +1,19 @@
+= render 'shared/header'
+.show_body
+  .show_body__wrapper
+    .task_detail
+      .task_detail__title
+        TITLE
+        = @todo.task
+      .task_detail__detail
+        DETAIL
+        = @todo.detail
+      .task_detail__deadline
+        DEADLINE
+        = "#{@todo.deadline.strftime("%Y/%m/%d")}"
+      .task_detail__priprity
+        PRIORITY
+        = @todo.priority.name
+      .task_detail__status
+        STATUS
+        = @todo.status.name

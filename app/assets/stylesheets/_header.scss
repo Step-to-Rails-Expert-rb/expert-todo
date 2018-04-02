@@ -1,0 +1,22 @@
+.header {
+  height: 50px;
+  width: 1424px;
+  background-color: #bbb;
+  text-decoration: none;
+  &__wrapper {
+    font-size: 25px;
+    &__element {
+      float: right;
+      margin: 10px;
+      font-size: 20px;
+      height: 30px;
+      width: 150px;
+      background-color: white;
+      text-align: center;
+    }
+  }
+}
+
+.header_menu {
+  text-decoration: none;
+}

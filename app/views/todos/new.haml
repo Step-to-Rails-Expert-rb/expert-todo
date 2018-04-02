@@ -1,0 +1,25 @@
+= render 'shared/header'
+.new_body
+  .form
+    = form_for @todo do |f|
+      .form_title TITLE
+      .form__task
+        = f.text_field :task, placeholder: "TITLE", class: "form__task__field"
+      .form_title
+        DETAIL
+      .form__detail
+        = f.text_field :detail, size: "10", placeholder: "DETAIL", class: "form__detail__field", rows:15
+      .form_title
+        DEADLINE
+      .form__deadline
+        = f.date_select :deadline, class: "collection_select"
+      .form_title
+        PRIORITY
+      .form__priority
+        = f.collection_select(:priority_id, Priority.all, :id, :name, class: "collection_select")
+      .form_title
+        STATUS
+      .form__status
+        = f.collection_select(:status_id, Status.all, :id, :name, class: "collection_select")
+      .form__send
+        = f.submit "Send", class: "button"
